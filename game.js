@@ -7,6 +7,19 @@ var level = 0;
 // dibawah function
 // nextSequence
 
+// to secure the Javascript code
+document.onkeydown = function(e) {
+        if (e.ctrlKey &&
+            (e.keyCode === 67 ||
+             e.keyCode === 86 ||
+             e.keyCode === 85 ||
+             e.keyCode === 117)) {
+            return false;
+        } else {
+            return true;
+        }
+};
+
 $(document).keypress(function() {
   if (!gameStarted) {
     $("#level-title").text("Level " + level);
