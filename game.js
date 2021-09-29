@@ -15,6 +15,14 @@ $(document).keypress(function(){
   }
 })
 
+$(document).click(function(){
+  if (!gameStarted) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    gameStarted = true;
+  }
+})
+
 $(".btn").click(function(){
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
